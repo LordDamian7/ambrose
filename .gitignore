@@ -1,0 +1,29 @@
+# Ambrose v1.1 · public/private split
+# The household's SYSTEM is public; the Principal's LIFE is not.
+# Blank versions of every private file live in butler/templates/fresh-install/.
+
+# The Principal's personal model: profile, goals, patterns, consent
+butler/user-model/*
+
+# Studies of the Principal: hypotheses and Cabinet briefs
+butler/cabinet/HYPOTHESES.md
+butler/cabinet/briefs/*
+
+# Session journals, parked ideas, inbox
+butler/journal/*
+butler/inbox/*
+
+# Each Minister's private memory of the Principal
+.claude/agent-memory/
+
+# Keep empty folders so a fresh install has the right shape
+!**/.gitkeep
+
+# Local secrets and clutter
+.env
+.env.*
+__pycache__/
+*.pyc
+~$*
+.DS_Store
+Thumbs.db
