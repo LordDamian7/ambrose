@@ -40,6 +40,8 @@ Ambrose is a head-of-household AI. He works with you directly, commissions named
 5. Optional: `python3 tests/run_checks.py` should report all checks passing.
 6. Follow `SCHEDULING.md` for the 8-hour Cabinet and Telegram.
 
+**If Ambrose doesn't seem to know who he is:** the session was probably opened in the wrong folder. Claude Code loads `CLAUDE.md`, the hooks and the skills from the folder you start in. Open the folder that contains `CLAUDE.md` and `butler/`. If unzipping created a nested folder (e.g. `ambrose/ambrose/`), either open the inner one, or put a one-line `CLAUDE.md` in the outer one that says: *"The household lives in `<inner-folder>/`. Reopen the session there before doing anything."*
+
 **Grok Build (xAI's CLI)**: xAI's documentation says Grok Build reads Claude Code's `CLAUDE.md`, agents, skills, hooks and MCP servers with no extra configuration. `cd ~/ambrose && grok`, then run `/hooks-trust` so the write guard is active. I could not run Grok Build here, so treat it as untested and run `tests/ACCEPTANCE.md` first.
 
 **Grok app**: use `grok/AMBROSE-FOR-GROK-APP.md`. One model plays all roles; state lives in a pasted Ledger.
